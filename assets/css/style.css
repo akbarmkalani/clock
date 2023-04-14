@@ -1,0 +1,122 @@
+main {
+  background-color: #0d324d;
+}
+main > .container {
+  background-color: #0d324d;
+  height: 100vh;
+}
+main > .container > .house {
+  height: 400px;
+  width: 400px;
+  background-color: #051b2b;
+  -webkit-clip-path: polygon(50% 0%, 100% 23%, 96% 100%, 4% 100%, 0 23%);
+          clip-path: polygon(50% 0%, 100% 23%, 96% 100%, 4% 100%, 0 23%);
+  z-index: 3;
+}
+main > .container > .house > section {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #121313 !important;
+}
+main > .container > .house > section > .number {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+  color: white;
+}
+main > .container > .house > section > .twelve {
+  left: 50%;
+  top: 5px;
+  transform: translate(-50%, 0);
+}
+main > .container > .house > section > .three {
+  right: 5px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+main > .container > .house > section > .six {
+  left: 50%;
+  bottom: 5px;
+  transform: translate(-50%, 0%);
+}
+main > .container > .house > section > .nine {
+  top: 50%;
+  left: 5px;
+  transform: translate(0, -50%);
+}
+main > .container > .house > section::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #ededf0;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+main > .container > .house > section .hand {
+  background: #fefcfc;
+  position: absolute;
+  margin: auto;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 10px;
+  transform: rotate(0deg);
+  transform-origin: bottom;
+}
+main > .container > .house .minute {
+  height: 75px;
+  width: 4px;
+  background-color: #0d324d !important;
+}
+main > .container > .house .seconds {
+  height: 78px;
+  width: 2px;
+  background-color: #fa04f1 !important;
+}
+main > .container > .house .hour {
+  height: 75px;
+  width: 5px;
+  background-color: #fa9405 !important;
+}
+main > .container .pendulum {
+  z-index: 1;
+  width: 15px;
+  height: 300px;
+  background-color: #7f5a83;
+  left: 50%;
+  bottom: 10%;
+  background-image: linear-gradient(315deg, #703f75 0%, #08253a 72%);
+  transform-origin: top;
+  transform: rotate(-15deg);
+  animation: move 2s linear infinite alternate;
+}
+main > .container .pendulum > .cir {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f6f6f6;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+main > .container .pendulum > .cir > .star1 {
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e3d9e4 !important;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+@keyframes move {
+  to {
+    transform: rotate(15deg);
+  }
+}/*# sourceMappingURL=style.css.map */
